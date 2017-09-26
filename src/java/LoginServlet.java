@@ -45,10 +45,11 @@ public class LoginServlet extends HttpServlet {
         String username=request.getParameter("username");
         String password=request.getParameter("password");
         String message="";
-        UserService auth=new UserService(username,password);
+        User u= new User(username,password);
+        UserService us= new UserService();
         
         
-        if(auth.login()==false){
+        if(us.login(u.name,u.password)==false){
             request.setAttribute("message","Invalid username or password.");
             getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
             return;

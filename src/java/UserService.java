@@ -9,19 +9,12 @@
  * @author 718205
  */
 public class UserService {
-    String username;
-    String password;
     
-    public UserService(String username,String password){
-        this.username=username;
-        this.password=password;
-    }
-    
-    public boolean login(){
+    public boolean login(String username,String password){
         boolean result=false;
         
-        String uname = this.username;
-        String pass= this.password;
+        String uname = username;
+        String pass= password;
         
         if(uname.equals("adam")==true||uname.equals("betty")==true){
             if(pass.equals("password")==true){

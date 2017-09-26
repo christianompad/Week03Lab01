@@ -6,11 +6,8 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Login</title>
-    </head>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:import url="/WEB-INF/header.html"/>
     <body>
         <h1>Login Page</h1>
         <form action="Login" method="post">
@@ -21,4 +18,4 @@
         ${message}
         
     </body>
-</html>
+    <c:import url="/WEB-INF/footer.html"/>
